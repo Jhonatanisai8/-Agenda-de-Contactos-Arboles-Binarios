@@ -13,14 +13,14 @@ import org.jhonatan.app.Modelo.NodoContacto;
  *
  * @author User
  */
-public class frmListaContactos extends javax.swing.JFrame {
+public class frmMantenimientoCon extends javax.swing.JFrame {
 
     /**
-     * Creates new form frmListaContactos
+     * Creates new form frmMantenimientoCon
      */
     ArbolContacto arbolContacto = new ArbolContacto();
-    
-    public frmListaContactos() {
+
+    public frmMantenimientoCon() {
         initComponents();
         setTitle("MANTENIMIENTO DE CONTACTOS");
     }
@@ -70,8 +70,18 @@ public class frmListaContactos extends javax.swing.JFrame {
         });
 
         jButton3.setText("ELIMINAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("LISTAR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("CERRAR");
 
@@ -153,7 +163,7 @@ public class frmListaContactos extends javax.swing.JFrame {
         txtCodidgo.setText("");
         txtCodidgo.requestFocus();;
     }
-    
+
     private void cargarDatos(NodoContacto nodoContacto) {
         if (nodoContacto != null) {
             txtCodidgo.setText(nodoContacto.getContacto().getCodigo() + "");
@@ -175,16 +185,25 @@ public class frmListaContactos extends javax.swing.JFrame {
             limpiarControles();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         NodoContacto aux = arbolContacto.buscarContacto(Integer.parseInt(txtCodidgo.getText()));
         if (aux != null) {
             cargarDatos(aux);
         } else {
-            JOptionPane.showMessageDialog(rootPane, "El contaco con codifo: " + Integer.valueOf(txtCodidgo.getText()));
+            JOptionPane.showMessageDialog(rootPane, "El contaco con codifo: " + Integer.valueOf(txtCodidgo.getText()) + " no encontrado");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        frmListadoContactos v3 = new frmListadoContactos();
+        v3.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,20 +222,21 @@ public class frmListaContactos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmListaContactos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmMantenimientoCon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmListaContactos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmMantenimientoCon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmListaContactos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmMantenimientoCon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmListaContactos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmMantenimientoCon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmListaContactos().setVisible(true);
+                new frmMantenimientoCon().setVisible(true);
             }
         });
     }

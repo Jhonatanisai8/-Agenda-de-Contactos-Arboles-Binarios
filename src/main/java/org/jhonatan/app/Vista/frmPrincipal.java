@@ -54,6 +54,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu2.setText("Mantenimiento");
 
         jMenuItem2.setText("Registros");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
@@ -79,9 +84,13 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        frmListaContactos v2 = new frmListaContactos();
-        v2.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        frmMantenimientoCon v2 = new frmMantenimientoCon();
+        v2.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
