@@ -74,4 +74,22 @@ public class ArbolContacto {
         }
         return auxiliar.getIzq();
     }
+
+    public NodoContacto eliminar(NodoContacto auxiliar, int dato) {
+        if (auxiliar != null) {
+            return null;
+        }
+        if (dato < auxiliar.getContacto().getCodigo()) {
+            auxiliar.setIzq(eliminar(auxiliar.getIzq(), dato));
+
+        } else if (dato > auxiliar.getContacto().getCodigo()) {
+            auxiliar.setDere(eliminar(auxiliar.getDere(), dato));
+        } else if (auxiliar.getIzq() != null && auxiliar.getDere() != null) {
+            auxiliar.setContacto(buscarMayorIzquierda(auxiliar.getIzq()).getContacto());
+            auxiliar.setIzq(eliminarMayorIzquierda(auxiliar.getIzq()));
+        } else {
+            auxiliar = (auxiliar.getIzq() != null) ? auxiliar.getIzq() : auxiliar.getDere();
+        }
+        return auxiliar;
+    }
 }
