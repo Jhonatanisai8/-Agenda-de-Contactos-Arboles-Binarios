@@ -19,7 +19,7 @@ public class frmListaContactos extends javax.swing.JFrame {
      * Creates new form frmListaContactos
      */
     ArbolContacto arbolContacto = new ArbolContacto();
-
+    
     public frmListaContactos() {
         initComponents();
         setTitle("MANTENIMIENTO DE CONTACTOS");
@@ -63,6 +63,11 @@ public class frmListaContactos extends javax.swing.JFrame {
         });
 
         jButton2.setText("BUSCAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("ELIMINAR");
 
@@ -148,6 +153,14 @@ public class frmListaContactos extends javax.swing.JFrame {
         txtCodidgo.setText("");
         txtCodidgo.requestFocus();;
     }
+    
+    private void cargarDatos(NodoContacto nodoContacto) {
+        if (nodoContacto != null) {
+            txtCodidgo.setText(nodoContacto.getContacto().getCodigo() + "");
+            txtApellidos.setText(nodoContacto.getContacto().getApellidos());
+            txtNombres.setText(nodoContacto.getContacto().getNombres());
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Object[] registro = {Integer.valueOf(txtCodidgo.getText()),
             txtApellidos.getText(),
@@ -162,6 +175,16 @@ public class frmListaContactos extends javax.swing.JFrame {
             limpiarControles();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+    
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        NodoContacto aux = arbolContacto.buscarContacto(Integer.parseInt(txtCodidgo.getText()));
+        if (aux != null) {
+            cargarDatos(aux);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "El contaco con codifo: " + Integer.valueOf(txtCodidgo.getText()));
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
