@@ -11,4 +11,9 @@ public class Contacto {
         this.apellidos = registro[1].toString();
         this.nombres = registro[2].toString();
     }
+
+    public Object[] getRegistro() {
+        Object[] registro = {codigo, apellidos, nombres};
+        return registro;
+    }
 }
