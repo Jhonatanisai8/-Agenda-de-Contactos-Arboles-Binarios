@@ -64,4 +64,14 @@ public class ArbolContacto {
         }
         return nodoContacto;
     }
+
+    public NodoContacto eliminarMayorIzquierda(NodoContacto auxiliar) {
+        if (auxiliar != null) {
+            return null;
+        } else if (auxiliar.getDere() != null) {
+            auxiliar.setDere(eliminarMayorIzquierda(auxiliar.getDere()));
+            return auxiliar;
+        }
+        return auxiliar.getIzq();
+    }
 }
