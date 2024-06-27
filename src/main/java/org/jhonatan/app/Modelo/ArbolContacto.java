@@ -1,21 +1,23 @@
 package org.jhonatan.app.Modelo;
 
+import javax.swing.table.DefaultTableModel;
+
 public class ArbolContacto {
-
+    
     private NodoContacto raiz;
-
+    
     public ArbolContacto() {
         raiz = null;
     }
-
+    
     public NodoContacto getRaiz() {
         return raiz;
     }
-
+    
     public void setRaiz(NodoContacto raiz) {
         this.raiz = raiz;
     }
-
+    
     public NodoContacto agregarContacto(NodoContacto nodoContacto, Contacto contacto) {
         if (nodoContacto == null) {
             NodoContacto nuevo = new NodoContacto(contacto);
@@ -29,7 +31,7 @@ public class ArbolContacto {
         }
         return nodoContacto;
     }
-
+    
     public NodoContacto buscarContacto(int codigo) {
         NodoContacto auxiliar = raiz;
         while (auxiliar != null) {
@@ -45,5 +47,12 @@ public class ArbolContacto {
         }
         return null;
     }
-
+    
+    public void listarInOrden(NodoContacto nodoContacto, DefaultTableModel modelo) {
+        if (nodoContacto != null) {
+            listarInOrden(nodoContacto.getIzq(), modelo);
+            modelo.addRow(nodoContacto.getContacto().getRegistro());
+            listarInOrden(nodoContacto.getDere(), modelo);
+        }
+    }
 }
