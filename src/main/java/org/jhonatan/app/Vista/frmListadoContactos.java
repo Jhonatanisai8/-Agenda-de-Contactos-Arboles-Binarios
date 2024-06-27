@@ -4,6 +4,8 @@
  */
 package org.jhonatan.app.Vista;
 
+import org.jhonatan.app.Modelo.ArbolContacto;
+
 /**
  *
  * @author User
@@ -13,8 +15,11 @@ public class frmListadoContactos extends javax.swing.JFrame {
     /**
      * Creates new form frmListadoContactos
      */
-    public frmListadoContactos() {
+    ArbolContacto arbolContacto;
+    
+    public frmListadoContactos(ArbolContacto arbolContacto) {
         initComponents();
+        this.arbolContacto = arbolContacto;
     }
 
     /**
@@ -121,7 +126,6 @@ public class frmListadoContactos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmListadoContactos().setVisible(true);
             }
         });
     }
