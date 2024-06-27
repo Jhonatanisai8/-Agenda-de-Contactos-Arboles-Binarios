@@ -142,6 +142,12 @@ public class frmListaContactos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void limpiarControles() {
+        txtApellidos.setText("");
+        txtNombres.setText("");
+        txtCodidgo.setText("");
+        txtCodidgo.requestFocus();;
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Object[] registro = {Integer.valueOf(txtCodidgo.getText()),
             txtApellidos.getText(),
@@ -153,6 +159,7 @@ public class frmListaContactos extends javax.swing.JFrame {
             Contacto contacto = new Contacto(registro);
             JOptionPane.showMessageDialog(null, "Contacto registrado");
             arbolContacto.setRaiz(arbolContacto.agregarContacto(arbolContacto.getRaiz(), contacto));
+            limpiarControles();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
