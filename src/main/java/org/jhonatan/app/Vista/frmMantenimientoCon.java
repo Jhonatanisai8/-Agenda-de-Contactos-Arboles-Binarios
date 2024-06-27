@@ -4,6 +4,7 @@
  */
 package org.jhonatan.app.Vista;
 
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import javax.swing.JOptionPane;
 import org.jhonatan.app.Modelo.ArbolContacto;
 import org.jhonatan.app.Modelo.Contacto;
@@ -23,6 +24,7 @@ public class frmMantenimientoCon extends javax.swing.JFrame {
     public frmMantenimientoCon() {
         initComponents();
         setTitle("MANTENIMIENTO DE CONTACTOS");
+        FlatMaterialLighterIJTheme.setup();
     }
 
     /**

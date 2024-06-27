@@ -4,6 +4,7 @@
  */
 package org.jhonatan.app.Vista;
 
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import org.jhonatan.app.Modelo.ArbolContacto;
 
 /**
@@ -18,6 +19,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         initComponents();
         arbolContacto = new ArbolContacto();
         setTitle("BIENVENIDO AL SISTEMA");
+        FlatMaterialLighterIJTheme.setup();
     }
 
     @SuppressWarnings("unchecked")

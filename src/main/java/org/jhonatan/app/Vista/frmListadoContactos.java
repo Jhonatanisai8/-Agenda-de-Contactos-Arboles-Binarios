@@ -1,5 +1,6 @@
 package org.jhonatan.app.Vista;
 
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import javax.swing.table.DefaultTableModel;
 import org.jhonatan.app.Modelo.ArbolContacto;
 
@@ -13,6 +14,7 @@ public class frmListadoContactos extends javax.swing.JFrame {
         this.arbolContacto = arbolContacto;
         modelo = (DefaultTableModel) jTable1.getModel();
         mostrarDatos();
+        FlatMaterialLighterIJTheme.setup();
     }
 
     private void limpiarTabla() {
