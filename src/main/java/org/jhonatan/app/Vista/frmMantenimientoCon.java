@@ -51,12 +51,25 @@ public class frmMantenimientoCon extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel1.setFont(new java.awt.Font("SimHei", 0, 18)); // NOI18N
         jLabel1.setText("Codigo:");
 
+        txtCodidgo.setFont(new java.awt.Font("SimHei", 0, 18)); // NOI18N
+
+        txtApellidos.setFont(new java.awt.Font("SimHei", 0, 18)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("SimHei", 0, 18)); // NOI18N
         jLabel2.setText("Apellidos:");
 
+        txtNombres.setFont(new java.awt.Font("SimHei", 0, 18)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("SimHei", 0, 18)); // NOI18N
         jLabel3.setText("Nombres:");
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agregar-usuario (1).png"))); // NOI18N
         jButton1.setText("REGISTRAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +77,8 @@ public class frmMantenimientoCon extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/buscar (1).png"))); // NOI18N
         jButton2.setText("BUSCAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +86,8 @@ public class frmMantenimientoCon extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/hombre.png"))); // NOI18N
         jButton3.setText("ELIMINAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +95,8 @@ public class frmMantenimientoCon extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cliente.png"))); // NOI18N
         jButton4.setText("LISTAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +104,8 @@ public class frmMantenimientoCon extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cerrar-sesion.png"))); // NOI18N
         jButton5.setText("CERRAR");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

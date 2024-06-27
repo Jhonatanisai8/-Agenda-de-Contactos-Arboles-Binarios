@@ -55,6 +55,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mantenimiento.png"))); // NOI18N
         jMenu2.setText("Mantenimiento");
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cliente.png"))); // NOI18N
         jMenuItem2.setText("Registros");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
