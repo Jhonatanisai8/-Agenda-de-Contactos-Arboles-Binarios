@@ -66,7 +66,7 @@ public class ArbolContacto {
     }
 
     public NodoContacto eliminarMayorIzquierda(NodoContacto auxiliar) {
-        if (auxiliar != null) {
+        if (auxiliar == null) {
             return null;
         } else if (auxiliar.getDere() != null) {
             auxiliar.setDere(eliminarMayorIzquierda(auxiliar.getDere()));
@@ -76,7 +76,7 @@ public class ArbolContacto {
     }
 
     public NodoContacto eliminar(NodoContacto auxiliar, int dato) {
-        if (auxiliar != null) {
+        if (auxiliar == null) {
             return null;
         }
         if (dato < auxiliar.getContacto().getCodigo()) {
