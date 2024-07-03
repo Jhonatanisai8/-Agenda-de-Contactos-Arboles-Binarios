@@ -1,16 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package org.jhonatan.app.Vista;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import org.jhonatan.app.Modelo.ArbolContacto;
-
-/**
- *
- * @author User
- */
 public class frmPrincipal extends javax.swing.JFrame {
 
     ArbolContacto arbolContacto;
