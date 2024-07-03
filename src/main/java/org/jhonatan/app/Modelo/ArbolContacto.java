@@ -25,8 +25,10 @@ public class ArbolContacto {
         } else {
             if (contacto.getNombreCompleto().compareTo(nodoContacto.getContacto().getNombreCompleto()) > 0) {
                 nodoContacto.setDere(agregarContacto(nodoContacto.getDere(), contacto));
+                System.out.println(contacto.getNombreCompleto() + " Se agrego al nodo derecho: ");
             } else {
                 nodoContacto.setIzq(agregarContacto(nodoContacto.getIzq(), contacto));
+                System.out.println(contacto.getNombreCompleto() + " Se agrego al nodo izquierdo: ");
             }
         }
         return nodoContacto;
