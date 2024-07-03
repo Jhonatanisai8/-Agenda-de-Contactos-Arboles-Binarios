@@ -35,10 +35,10 @@ public class ArbolContacto {
     public NodoContacto buscarContacto(int codigo) {
         NodoContacto auxiliar = raiz;
         while (auxiliar != null) {
-            if (String.valueOf(auxiliar.getContacto().getCodigo()).startsWith(String.valueOf(codigo))) {
+            if (auxiliar.getContacto().getCodigo() == codigo) {
                 return auxiliar;
             } else {
-                if (String.valueOf(codigo).compareTo(String.valueOf(auxiliar.getContacto().getCodigo())) > 0) {
+                if (codigo > auxiliar.getContacto().getCodigo()) {
                     auxiliar = auxiliar.getDere();
                 } else {
                     auxiliar = auxiliar.getIzq();
